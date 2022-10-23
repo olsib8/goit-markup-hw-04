@@ -10,8 +10,14 @@
   --fourth-text-color: rgba(255, 255, 255, 0.6);
   --fifth-text-color: #000000;
   --primary-accent-color: #2196f3;
+  --secondary-accent-color: #ffffff;
   --primary-border-color: #ececec;
   --secondaty-border-color: #eeeeee;
+  --third-border-color: #afb1b8;
+  --sixth-background-color: #c4c4c4;
+  --seventh-background-color: rgba(255, 255, 255, 0.1);
+  --primary-icon-color: #afb1b8;
+  --secondary-icon-color: #ffffff;
 }
 body {
   background-color: var(--primary-background-color);
@@ -99,6 +105,15 @@ ol {
   gap: 50px;
   margin-left: auto;
 }
+.header-icon {
+  margin-right: 10px;
+}
+.header-envelope {
+  fill: currentColor;
+}
+.header-smartphone {
+  fill: currentColor;
+}
 
 .logo {
   font-family: raleway, sans-serif;
@@ -127,6 +142,7 @@ ol {
 }
 .header-link {
   color: var(--secondary-text-color);
+  display: flex;
 }
 .header-link:hover,
 .header-link:focus {
@@ -138,6 +154,17 @@ ol {
 .hero {
   background-color: var(--secondary-background-color);
   padding: 200px 0;
+}
+.overlay-hero {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/overlay.jpg);
+  background-color: var(--sixth-background-color);
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-title {
   color: var(--third-text-color);
@@ -172,7 +199,7 @@ ol {
 }
 .features {
   padding-top: 94px;
-  padding-bottom: 118px;
+  padding-bottom: 94px;
 }
 .features-title {
   line-height: 1.14;
@@ -183,8 +210,18 @@ ol {
 }
 .features-list {
   display: flex;
-
   gap: 30px;
+}
+.features-icon {
+}
+.list-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--third-background-color);
+  margin-bottom: 30px;
 }
 .features-text {
   line-height: 1.71;
@@ -236,8 +273,71 @@ ol {
   line-height: 1.19;
   text-align: center;
   color: var(--secondary-text-color);
+  margin-bottom: 16px;
 }
-
+.box-soc-item {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.box-soc-list {
+  width: 44px;
+  height: 44px;
+}
+.box-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-icon-color);
+}
+.box-soc-icon {
+  fill: currentColor;
+}
+.box-soc-link:hover,
+.box-soc-link:focus {
+  color: var(--secondary-accent-color);
+  background-color: var(--primary-accent-color);
+}
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clints-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+.clients-item {
+  width: calc((100% - 150px) / 6);
+  height: 92px;
+}
+.clients-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--third-border-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-icon-color);
+}
+.clients-icon {
+  fill: currentColor;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--primary-accent-color);
+  color: var(--primary-accent-color);
+}
 /* Мейн портфоліо */
 
 .items {
@@ -264,6 +364,11 @@ ol {
 .items-btn:focus {
   color: var(--third-text-color);
   background-color: var(--primary-accent-color);
+}
+.items-shadow:hover,
+.items-shadow:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .container-btn {
   display: flex;
@@ -337,4 +442,47 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
+}
+.footer-area {
+  display: flex;
+  align-items: baseline;
+}
+footer-primary {
+}
+.footer-secondary {
+  margin-left: 70px;
+}
+.footer-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--third-text-color);
+  line-height: 1.14;
+  margin-bottom: 20px;
+}
+.footer-soc-item {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.footer-soc-list {
+  width: 44px;
+  height: 44px;
+}
+.footer-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-icon-color);
+  background-color: var(--seventh-background-color);
+}
+.footer-soc-icon {
+  fill: currentColor;
+}
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  color: var(--secondary-accent-color);
+  background-color: var(--primary-accent-color);
 }
